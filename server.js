@@ -5,9 +5,8 @@ app.use(express.urlencoded());
 app.get('/',function(req,res){
   res.send('Default');
 });
-app.get('/:rollNumber',function(req,res){
-    var rN = req.params.rollNumber;
-    var name = "Adi";
-    res.send(name);
+app.get('/getDate',function(req,res){
+    var date = new Date();
+    res.send(date);
   });
 app.listen(7676);
